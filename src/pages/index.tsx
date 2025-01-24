@@ -1,7 +1,12 @@
+import Layout from "../components/Layout";
+import Seo from "../components/Seo";
+
 export default function IndexPage() {
   return (
-    <div>
-      <h1>후르츠지퍼 랜딩페이지</h1>
-    </div>
+    <Layout title="후르츠지퍼 랜딩페이지">
+      <div></div>
+    </Layout>
   );
 }
+
+export const Head = () => <Seo title="HOME" />;
