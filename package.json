@@ -18,6 +18,7 @@
   "dependencies": {
     "gatsby": "^5.14.1",
     "gatsby-plugin-babel": "^1.0.0",
+    "gatsby-source-filesystem": "^5.14.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
