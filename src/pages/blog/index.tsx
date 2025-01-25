@@ -1,6 +1,6 @@
 import { graphql, Link, PageProps } from "gatsby";
-import Layout from "../components/Layout";
-import Seo from "../components/Seo";
+import Layout from "../../components/Layout";
+import Seo from "../../components/Seo";
 
 export default function Blog({ data }: PageProps<Queries.BlogPostsQuery>) {
   console.log(data);
