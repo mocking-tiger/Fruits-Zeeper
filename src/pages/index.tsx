@@ -1,7 +1,7 @@
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
-import { graphql, PageProps } from "gatsby";
+import { graphql, Link, PageProps } from "gatsby";
 
 export default function IndexPage({ data }: PageProps<Queries.FruitsQuery>) {
   return (
@@ -16,8 +16,10 @@ export default function IndexPage({ data }: PageProps<Queries.FruitsQuery>) {
             image={getImage(fruit.preview?.gatsbyImageData!)!}
             alt={fruit.name ?? "상품 프리뷰"}
           />
-          <h2>{fruit.name}</h2>
-          <h4>₩{fruit.price}</h4>
+          <Link to={`/products/${fruit.id}`}>
+            <h2>{fruit.name}</h2>
+            <h4>₩{fruit.price}</h4>
+          </Link>
         </article>
       ))}
     </Layout>
@@ -31,8 +33,9 @@ export const query = graphql`
         name
         price
         preview {
-          gatsbyImageData(placeholder: DOMINANT_COLOR, height: 250)
+          gatsbyImageData(placeholder: DOMINANT_COLOR, height: 450)
         }
+        id
       }
     }
   }

@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 
 interface ILayoutProps {
-  children: any;
+  children?: any;
   title: string;
 }
 
