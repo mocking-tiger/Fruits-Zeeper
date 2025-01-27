@@ -17,11 +17,13 @@
   },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
+    "dotenv": "^16.4.7",
     "gatsby": "^5.14.1",
     "gatsby-plugin-babel": "^1.0.0",
     "gatsby-plugin-image": "^3.14.0",
     "gatsby-plugin-mdx": "^5.14.0",
     "gatsby-plugin-sharp": "^5.14.0",
+    "gatsby-source-contentful": "^8.15.0",
     "gatsby-source-filesystem": "^5.14.0",
     "gatsby-transformer-sharp": "^5.14.0",
     "react": "^18.2.0",
