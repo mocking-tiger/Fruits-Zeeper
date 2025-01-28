@@ -1,7 +1,7 @@
-import { graphql } from "gatsby";
-import Layout from "../../components/Layout";
 import Seo from "../../components/Seo";
+import Layout from "../../components/Layout";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
 
 interface IBlogPostProps {
   data: Queries.PostDetailQuery;
@@ -15,10 +15,7 @@ export default function BlogPost({ data, children }: IBlogPostProps) {
   );
   return (
     <Layout title="Blog Post">
-      <GatsbyImage
-        image={image as any}
-        alt={data.mdx?.frontmatter?.title ?? "블로그 이미지"}
-      />
+      <GatsbyImage image={image as any} alt={data.mdx?.frontmatter?.title!} />
       <div>{children}</div>
     </Layout>
   );
@@ -36,7 +33,7 @@ export const query = graphql`
         title
         headerImage {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(height: 300)
           }
         }
       }
