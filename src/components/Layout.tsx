@@ -1,13 +1,13 @@
 import { Link } from "gatsby";
 
 interface ILayoutProps {
-  children?: any;
+  children: any;
   title: string;
 }
 
 export default function Layout({ children, title }: ILayoutProps) {
   return (
-    <div>
+    <div className="container">
       <nav>
         <ul>
           <li>
